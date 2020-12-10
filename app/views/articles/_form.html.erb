@@ -1,5 +1,10 @@
 <%= form_with(model: article, local: true) do |form| %>
-      <%= form.text_field :image, placeholder: "Image Url" %>
-      <%= form.text_area :text, placeholder: "text", rows: "10" %>
+      <%= form.text_area :name, placeholder: "記事のタイトル", rows: "10" %>
+      <%= form.text_area :description, placeholder: "詳細", rows: "10" %>
+          <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= form.file_field :image, id:"item-image" %>
+      
       <%= form.submit "SEND" %>
     <% end %>

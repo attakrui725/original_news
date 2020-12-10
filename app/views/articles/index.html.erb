@@ -10,3 +10,9 @@
 
 
 <br>ここに記述一覧が表示される<br>
+
+<% @articles.each do |article| %>
+<%= article.name %>
+<%= image_tag article.image.variant(resize: '500x500'), class: "item-img" if article.image.attached? %>
+<br><%= article.description %>
+<% end %>
