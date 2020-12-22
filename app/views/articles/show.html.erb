@@ -2,7 +2,7 @@
 <div class="content_area">
   <div > <%= image_tag @article.image, class: "news_image" %></div>
   <div class="news">
-  <%= @article.name %>
+  <%= @atitle %>
     <div class="read_more_center">続きを読む</div>
       <div class="edit">
       <% if user_signed_in? && @article.user_id == current_user.id %>

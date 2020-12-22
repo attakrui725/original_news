@@ -3,6 +3,8 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+
+
   end
 
   def new
@@ -22,6 +24,14 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @message = Message.new
     @messages = @article.messages.includes(:user)
+
+#スクレイピングの記述
+    agent = Mechanize.new
+    page = agent.get("#{@article.url}")
+    elements = page.title
+
+    @title = elements
+
   end
 
   def update
@@ -38,7 +48,7 @@ class ArticlesController < ApplicationController
 
 private
 def article_params
-  params.require(:article).permit(:name, :description, :image).merge(user_id: current_user.id)
+  params.require(:article).permit(:name, :description, :image, :url).merge(user_id: current_user.id)
 
 end
 
