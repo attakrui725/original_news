@@ -1,0 +1,85 @@
+html{
+  font-size: 100%;
+}
+body{
+  font-family:  "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+  background-color: #f1efe9;
+
+}
+
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+text-transform: uppercase;
+margin-top: 34px;
+list-style: none;
+}
+
+.main-nav li{
+margin-left: 36px;
+}
+
+.main-nav a{
+color:white;
+}
+
+.main-nav a:hover{
+  color: #0bd;
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+}
+.logo{
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.wrapper{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* HOME
+----------------------------------------------------*/
+
+.home-content {
+  text-align: center;
+  margin-top: 18%;
+}
+
+.page-title{
+
+  font-size:5rem ;
+  font-family: 'Philosopher', serif;
+  font-weight: normal;
+  color: antiquewhite;
+
+}
+
+/*大きな背景画像*/
+.big-bg{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+#home {
+  background-image: url("/images/AdobeStock_253877018.jpeg"), linear-gradient(#c9ffbf, #ffafbd);
+
+  min-height: 100vh;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 6%;
+  margin-bottom: 50px;
+  gap: 10%;
+
+}

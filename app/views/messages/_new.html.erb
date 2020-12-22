@@ -1,0 +1,19 @@
+<div class="news_input">
+<%= form_with(model: [@article, @message], local: true)  do |f| %>
+  <%= f.text_field :text, class: "text_box" %>
+  <%= f.submit '送信' %>
+<% end %>
+</div>
+
+<div class="news__output">
+<div id='messages'>
+<%if @messages.present? %>
+  <% @messages.reverse_each do |message| %>
+    <p class="message_plate"><%= message.text %>
+    <br><%= "投稿者#{message.user.name}" %>
+    </p>
+
+    <% end %>
+  <% end %>
+</div>
+</div>

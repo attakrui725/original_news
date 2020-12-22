@@ -1,18 +1,37 @@
-<h1>Hello</h1>
-<% if user_signed_in? %>
-<%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
-<%= link_to '新規投稿', new_article_path, class: "login" %>
-<% else %>
-<%= link_to 'ログイン', new_user_session_path, class: "login" %>
-<%= link_to '新規登録', new_user_registration_path, class: "sign-up" %>
-<% end %>
 
+  <head>
+  <title>make worthwhile time</title>
+  <meta name ="description" content="無駄をなくし、価値ある時間を増やすための学習サイト">
+  </head>
 
+  <body>
+  <div id="home" class="big-bg">
 
-<br>ここに記述一覧が表示される<br>
+  <header class="page-header wrapper">
+  <h1 class="logo">make worthwhile time</h1>
+      <nav>
+      <ul class="main-nav">
+        <% if user_signed_in? %>
+        <li><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "a" %></li>
+        <li><%= link_to 'new post', new_article_path, class: "a" %></li>
+        <% else %>
+        <li><%= link_to 'login', new_user_session_path, class: "a" %></li>
+        <li><%= link_to 'sign-up', new_user_registration_path, class: "a" %></li>
+        <% end %>
+    </ul>
+</nav>
+</header>
+<div class="home-content wrapper">
+<h2 class="page-title">make worthwhile time</h2>
 
-<% @articles.each do |article| %>
-<%= article.name %>
-<%= image_tag article.image.variant(resize: '500x500'), class: "item-img" if article.image.attached? %>
-<br><%= article.description %>
-<% end %>
+  </div>
+</div><!--/#home-->
+<%# <div class="wrapper grid"> %>
+<div class="article_list">
+<%= render @articles %>
+</div>
+
+<%# </div><!--/.grid--> %>
+
+  </body>
+</html>

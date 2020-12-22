@@ -1,0 +1,27 @@
+
+
+
+.text_box{
+  border: 1px solid #222;
+border-radius: 6px;
+}
+
+.news_input{
+margin-bottom: 3rem;
+}
+.news_output {
+
+}
+#messages {
+
+
+}
+.message_plate {
+  border: 1px solid #222;
+    width: 30rem;
+}
+
+#messages p{
+  margin-bottom: 10px;
+
+}

@@ -1,0 +1,46 @@
+
+
+.article_list {
+    border-top: 5px solid rgb(0, 0, 0);
+    padding-top: 40px;
+}
+
+.card {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    padding: 40px 5rem;
+}
+
+.card_container{
+    flex-direction: row-reverse;
+        display: flex;
+}
+
+.card_image{
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+    width: 25rem;
+    position: relative;
+    object-fit: cover;
+}
+
+.card_content{
+    flex: 1 1 auto;
+    order: 0;
+}
+
+.title{
+    color: rgb(0, 0, 0);
+    font-family: grot;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.description{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    margin-bottom: 0px;
+}
