@@ -20,8 +20,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    @messages = Message.all
     @message = Message.new
+    @messages = @article.messages.includes(:user)
   end
 
   def update
