@@ -1,5 +1,5 @@
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
-/Users/shin/.rbenv/versions/2.6.5/bin/ruby -I /Users/shin/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20201210-38173-kpkswv.rb extconf.rb
+/Users/shin/.rbenv/versions/2.6.5/bin/ruby -I /Users/shin/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20201222-32395-1s2o1jq.rb extconf.rb
 creating Makefile
 
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
@@ -36,4 +36,4 @@ linking shared-object bcrypt_ext.bundle
 
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/bcrypt-3.1.16/ext/mri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20201210-38173-1f0ulmq
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20201222-32395-1zag58

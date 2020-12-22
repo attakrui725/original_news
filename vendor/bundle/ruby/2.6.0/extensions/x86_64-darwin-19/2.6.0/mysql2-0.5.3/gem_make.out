@@ -1,5 +1,5 @@
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.3/ext/mysql2
-/Users/shin/.rbenv/versions/2.6.5/bin/ruby -I /Users/shin/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20201210-38173-jpngxc.rb extconf.rb --with-opt-dir\=/usr/local/opt/openssl@1.1
+/Users/shin/.rbenv/versions/2.6.5/bin/ruby -I /Users/shin/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20201222-32395-1f8f10s.rb extconf.rb --with-opt-dir\=/usr/local/opt/openssl@1.1
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -38,4 +38,4 @@ linking shared-object mysql2/mysql2.bundle
 
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/mysql2-0.5.3/ext/mysql2
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20201210-38173-myunep/mysql2
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20201222-32395-1mizpwd/mysql2

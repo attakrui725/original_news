@@ -1,5 +1,5 @@
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
-/Users/shin/.rbenv/versions/2.6.5/bin/ruby -I /Users/shin/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20201210-38173-1pq145s.rb extconf.rb
+/Users/shin/.rbenv/versions/2.6.5/bin/ruby -I /Users/shin/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20201222-32395-1958yj5.rb extconf.rb
 creating Makefile
 
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
@@ -16,4 +16,4 @@ linking shared-object byebug/byebug.bundle
 
 current directory: /Users/shin/projects/original_news/vendor/bundle/ruby/2.6.0/gems/byebug-11.1.3/ext/byebug
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20201210-38173-15qw4fj/byebug
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20201222-32395-1ku0wqe/byebug
