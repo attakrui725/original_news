@@ -1,9 +1,10 @@
 <div class="content">
 <div class="content_area">
-  <div > <%= image_tag @article.image, class: "news_image" %></div>
+  <div > <%= image_tag @image, class: "news_image" %></div>
   <div class="news">
-  <%= @atitle %>
-    <div class="read_more_center">続きを読む</div>
+  <%= @title %>
+  <%= link_to '続きを読む', @article.url, class: "read_more_center" %>
+    <%# <div class="read_more_center">続きを読む</div> %>
       <div class="edit">
       <% if user_signed_in? && @article.user_id == current_user.id %>
       <%= link_to '編集', '#', method: :get, class: "item-red-btn" %>
