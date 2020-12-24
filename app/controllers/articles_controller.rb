@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order("created_at DESC")
 
 
   end
@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    binding.pry
+
     # @article = Article.new(article_params)
     # if @article.save
     #   redirect_to root_path
@@ -25,11 +25,16 @@ class ArticlesController < ApplicationController
     page = agent.get(params[:article][:url])                    #投稿内容から記事のURLを取得
     title_ele = page.title                                      #urlからタイトル情報の取得
     content_ele = page.at('meta[property="og:description"]')    #urlから詳細情報の取得
-    image_ele = page.at('meta[property="og:image"]')            #urlからサムネイル画像の取得
-    image = image_ele.get_attribute(:content)
-    @article = Article.new(name: title_ele, description: content_ele, image: image, url: (params[:article][:url]), user_id: current_user.id)          #Articleモデルの生成
-    @article.save
-    #データの保存
+    content = content_ele.get_attribute(:content)
+    img_ele = page.at('meta[property="og:image"]')                #urlからサムネイル画像の取得
+    img = img_ele.get_attribute(:content)                         #url情報のみへの絞り込み
+    @article = Article.new(name: title_ele, description: content, img: img, url: (params[:article][:url]), user_id: current_user.id)                                                          #Articleモデルの生成
+    if @article.save                                                 #データの保存
+    redirect_to root_path
+    else
+      render :new
+    end
+
 
 
   end

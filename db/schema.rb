@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_12_19_084853) do
     t.string "name", null: false
     t.text "description", null: false
     t.text "url", null: false
-    t.text "image"
+    t.text "img"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
