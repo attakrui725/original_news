@@ -1,13 +1,12 @@
 
 
 .article_list {
-    border-top: 5px solid rgb(0, 0, 0);
-    padding-top: 40px;
+
 }
 
 .card {
-    border-bottom: 1px solid rgb(229, 229, 229);
-    padding: 40px 5rem;
+    border-bottom: 5px solid rgb(229, 229, 229);
+    padding: 40px 2rem;
 }
 
 .card_container{
@@ -18,10 +17,10 @@
 .card_image{
     background-position: center;
     background-size: cover;
-    height: 25rem;
     width: 25rem;
     position: relative;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 .card_content{
@@ -38,9 +37,11 @@
 }
 
 .description{
-    font-size: 16px;
+    font-size: 23px;
     font-weight: normal;
     font-style: normal;
     line-height: 1.5;
     margin-bottom: 0px;
+    font-family: grot;
+    margin-top: 1rem;
 }

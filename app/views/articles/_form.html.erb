@@ -1,11 +1,8 @@
 <%= form_with(model: article, local: true, multipart: true ) do |form| %>
-      <%# <%= form.text_area :name, placeholder: "記事のタイトル", rows: "10" %> %>
-      <%# <%= form.text_area :description, placeholder: "詳細", rows: "10" %> %>
+      <%# <%= form.text_area :name, placeholder: "記事のタイトル", rows: "10" %>
+      <%# <%= form.text_area :description, placeholder: "詳細", rows: "10" %>
       <%= form.text_area :url, placeholder: "記事のURL", rows: "10" %>
-          <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%# <%= form.file_field :image, id:"item-image" %> %>
+        <%# <%= form.file_field :image, id:"item-image" %>
 
       <%= form.submit "SEND" %>
     <% end %>

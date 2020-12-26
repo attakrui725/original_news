@@ -18,7 +18,7 @@ list-style: none;
 }
 
 .main-nav li{
-margin-left: 36px;
+margin-left: 2rem;
 }
 
 .main-nav a{
@@ -39,17 +39,17 @@ color:white;
 }
 
 .wrapper{
-  max-width: 1300px;
+
   margin: 0 auto;
-  padding: 0 4%;
+
 }
 
 /* HOME
 ----------------------------------------------------*/
 
 .home-content {
-  text-align: center;
-  margin-top: 18%;
+
+  margin-top: 40%;
 }
 
 .page-title{
@@ -58,7 +58,7 @@ color:white;
   font-family: 'grot', serif;
   font-weight: normal;
   color: antiquewhite;
-
+  margin-left: 2rem;
 }
 
 /*大きな背景画像*/

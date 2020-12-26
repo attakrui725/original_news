@@ -15,10 +15,11 @@
 .news_image{
     background-position: center;
     background-size: cover;
-    height: 25rem;
+
     width: 100%;
     position: relative;
     object-fit: cover;
+    border-radius: 6px;
 }
 
 .news{
@@ -47,6 +48,8 @@ background-color: #FFF;
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-radius: 6px;
+
 }
 
 .edit{
