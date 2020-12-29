@@ -15,7 +15,7 @@ services:
     volumes:
       - .:/original_news
     ports:
-      - "3000:3300"
+      - "3000:3000"
     depends_on:
       - db
     stdin_open: true
