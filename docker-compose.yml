@@ -1,30 +1,25 @@
-version: '2'
+version: '3'
 services:
   db:
     image: mysql:5.6
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
-    volumes:
-      - mysql-data:/var/lib/mysql    #データの永続化のために必要
     ports:
-      - "3306:3306"  #両方3306でもok。詳細は下の「番外編：DBをsequel proで可視化したい」へ
-
-  app:
-    tty: true          #コンテナ上でbinding.pryするために必要
-    stdin_open: true   #コンテナ上でbinding.pryするために必要
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql-data:/var/lib/mysql
+  web:
     build: .
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/original_news_test:delegated    #ローカルのディレクトリをコンテナ上にマウント
-      - bundle:/usr/local/bundle    #bundle installした後buildし直さなくてよくなる
-
-
+      - .:/original_news
     ports:
-      - "3000:3000"
-    links:
+      - "3000:3300"
+    depends_on:
       - db
-
+    stdin_open: true
+    tty: true
 volumes:
   mysql-data:
-  bundle:      #bundle installした後buildし直さなくてよくなる
+    driver: local

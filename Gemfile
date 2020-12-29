@@ -60,4 +60,3 @@ gem 'mini_magick'
 # gem 'image_processing', '~> 1.2'
 gem 'nokogiri'
 gem 'mechanize'
-gem "extractcontent", github: "mono0x/extractcontent"
