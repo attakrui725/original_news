@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_12_19_084853) do
     t.text "url", null: false
     t.text "img"
     t.bigint "user_id"
+    t.integer "genre_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_articles_on_user_id"
