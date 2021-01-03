@@ -10,4 +10,8 @@ self.data = [
 { id: 7, name: 'その他' },
 
 ]
+
+include ActiveHash::Associations
+has_many :articles
+
 end

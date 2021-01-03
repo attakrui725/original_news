@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    binding.pry
     @article = Article.new
 
   end
