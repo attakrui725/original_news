@@ -22,8 +22,10 @@
 </header>
 <div class="home-content wrapper">
 <h2 class="page-title">make worthwhile time</h2>
-
   </div>
+  <% @genres.each do |genre| %>
+    <%= link_to genre %>
+  <% end %>
 </div><!--/#home-->
 <%# <div class="wrapper grid"> %>
 <div class="article_list">
