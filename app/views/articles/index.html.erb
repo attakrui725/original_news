@@ -23,9 +23,11 @@
 <div class="home-content wrapper">
 <h2 class="page-title">make worthwhile time</h2>
   </div>
-  <% @articles.each do |article| %>
-    <%= link_to article.genre.name, /genres/genre.id %>
-  <% end %>
+
+  <% @genres.each do |genre| %>
+      <%= link_to "#{genre.name}",genre_path %>
+    <%end%>
+
 </div><!--/#home-->
 <%# <div class="wrapper grid"> %>
 <div class="article_list">
