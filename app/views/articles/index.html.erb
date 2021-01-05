@@ -24,7 +24,7 @@
 <h2 class="page-title">make worthwhile time</h2>
   </div>
 
-  <% @genres.each do |genre| %>
+  <% @genres.drop(1).each do |genre| %>
       <%= link_to "#{genre.name}", genre_path(genre.id) %>
     <%end%>
 
