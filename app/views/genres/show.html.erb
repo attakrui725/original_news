@@ -1,2 +1,19 @@
-<div class="article_list">
+<div class="content">
+<div class="content_area">
+<% @articles.each do |article| %>
+<%= link_to article_path(article.id) do %>
+
+  <div > <%= image_tag article.img, class: "news_image" %></div>
+  <div class="news">
+  <%= article.name %>
+  </div>
+<% end %>
+  <div class="news_comment">
+  <% article.messages.each do |message|  %>
+  <%= message.text %>
+  <% end %>
+
+<% end %>
+  </div>
+</div>
 </div>

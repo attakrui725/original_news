@@ -14,13 +14,6 @@ class ArticlesController < ApplicationController
 
   def create
 
-    # @article = Article.new(article_params)
-    # if @article.save
-    #   redirect_to root_path
-    # else
-    #   render :new
-    # end
-
     agent = Mechanize.new
     page = agent.get(params[:article][:url])                    #投稿内容から記事のURLを取得
     title_ele = page.title                                      #urlからタイトル情報の取得
@@ -43,6 +36,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @message = Message.new
     @messages = @article.messages.includes(:user)
+
 
 #スクレイピングの記述
     agent = Mechanize.new
