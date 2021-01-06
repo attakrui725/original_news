@@ -7,9 +7,13 @@
         <h1 class="title"><%= article.name %></h1>
         <p class="description"><%= article.description %></p>
         <% if current_user.already_favorited?(article) %>
-        <%= link_to 'いいねを外す', article_favorites_path(article), method: :delete %>
-        <% else %>
-        <%= link_to 'いいね', article_favorites_path(article), method: :post %>
+        <%= link_to article_favorites_path(article), method: :delete do %>
+        <i class="fas fa-heart"></i>
+        <% end %>
+      <% else %>
+        <%= link_to article_favorites_path(article), method: :post do %>
+          <i class="fas fa-heart"></i>
+          <% end %>
         <% end %>
         <%= article.favorites.count %>
       </div>
