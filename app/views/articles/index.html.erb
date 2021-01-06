@@ -22,13 +22,16 @@
 </header>
 <div class="home-content wrapper">
 <h2 class="page-title">make worthwhile time</h2>
-  </div>
-
-  <% @genres.drop(1).each do |genre| %>
-      <%= link_to "#{genre.name}", genre_path(genre.id) %>
+<div class="home-content-sub-title">
+ <% @genres.drop(1).each do |genre| %>
+      <%= link_to "#{genre.name}", genre_path(genre.id),class: "nav-link" %>
     <%end%>
+</div>
+
+</div>
 
 </div><!--/#home-->
+
 <%# <div class="wrapper grid"> %>
 <div class="article_list">
 <%= render @articles %>
