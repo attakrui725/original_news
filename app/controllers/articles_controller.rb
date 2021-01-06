@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all.order("created_at DESC")
-
+    @genres = Genre.all
 
   end
 
@@ -14,13 +14,6 @@ class ArticlesController < ApplicationController
 
   def create
 
-    # @article = Article.new(article_params)
-    # if @article.save
-    #   redirect_to root_path
-    # else
-    #   render :new
-    # end
-
     agent = Mechanize.new
     page = agent.get(params[:article][:url])                    #投稿内容から記事のURLを取得
     title_ele = page.title                                      #urlからタイトル情報の取得
@@ -28,7 +21,7 @@ class ArticlesController < ApplicationController
     content = content_ele.get_attribute(:content)
     img_ele = page.at('meta[property="og:image"]')                #urlからサムネイル画像の取得
     img = img_ele.get_attribute(:content)                         #url情報のみへの絞り込み
-    @article = Article.new(name: title_ele, description: content, img: img, url: (params[:article][:url]), user_id: current_user.id)                                                          #Articleモデルの生成
+    @article = Article.new(name: title_ele, description: content, img: img, url: (params[:article][:url]), user_id: current_user.id, genre_id: (params[:article][:genre_id]))                                                      #Articleモデルの生成
     if @article.save                                                 #データの保存
     redirect_to root_path
     else
@@ -43,6 +36,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @message = Message.new
     @messages = @article.messages.includes(:user)
+
 
 #スクレイピングの記述
     agent = Mechanize.new

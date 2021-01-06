@@ -3,12 +3,25 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-
+  flex-direction: column-reverse;
 }
+.genre_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
 
 .content_area{
   width: 528px;
   height: 50rem;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.genre_content_area{
+  width: 528px;
     position: relative;
     margin-bottom: 40px;
 }

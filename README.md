@@ -59,7 +59,8 @@ https://gyazo.com/a4d86c049d773147c120394e0f4e5cdc
 |description     |text       |null: false|
 |url             |text       |null: false|
 |img             |text       |null: false|
-|user           |references | null: false,foreign_key: true|
+|genre_id        |integer    |null: false|
+|user            |references |null: false,foreign_key: true|
 
 ### Association
 - has_many :comments

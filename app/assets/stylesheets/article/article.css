@@ -1,12 +1,23 @@
 
 
 .article_list {
+padding: 0;
+    width: 70rem;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
 .card {
     border-bottom: 5px solid rgb(229, 229, 229);
-    padding: 40px 2rem;
+    padding: 4rem 0;
+    width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .card_container{
@@ -21,6 +32,7 @@
     position: relative;
     object-fit: cover;
     border-radius: 6px;
+    margin-left: 2rem;
 }
 
 .card_content{

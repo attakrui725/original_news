@@ -6,6 +6,8 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.text :url, null:false
       t.text :img
       t.references :user, foreign_key: true
+      t.integer    :genre_id     , null: false
+
 
       t.timestamps
     end
