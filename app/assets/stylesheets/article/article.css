@@ -11,7 +11,7 @@ padding: 0;
 
 }
 
-.card {
+.card_wrapper {
     border-bottom: 5px solid rgb(229, 229, 229);
     padding: 4rem 0;
     width: 60rem;
@@ -56,4 +56,11 @@ padding: 0;
     margin-bottom: 0px;
     font-family: grot;
     margin-top: 1rem;
+}
+
+a,
+a:visited,
+a:focus,
+a:hover {
+  text-decoration: none;
 }

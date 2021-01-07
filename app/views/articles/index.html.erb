@@ -5,21 +5,25 @@
   </head>
 
   <body>
-  <div id="home" class="big-bg">
 
-  <header class="page-header wrapper">
-      <nav>
-      <ul class="main-nav">
+
+      <div class="container-fluid">
+        <div class="row">
+          <nav>
+            <ul class="nav ">
         <% if user_signed_in? %>
-        <li><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "a" %></li>
-        <li><%= link_to 'new post', new_article_path, class: "a" %></li>
+        <li class="nav-item"><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "a" %></li>
+        <li class="nav-item"><%= link_to 'new post', new_article_path, class: "a" %></li>
         <% else %>
         <li><%= link_to 'login', new_user_session_path, class: "a" %></li>
         <li><%= link_to 'sign-up', new_user_registration_path, class: "a" %></li>
         <% end %>
-    </ul>
-</nav>
-</header>
+            </ul>
+        </nav>
+
+
+  <div id="home" class="big-bg">
+
 <div class="home-content wrapper">
 <h2 class="page-title">make worthwhile time</h2>
 <div class="home-content-sub-title">
@@ -28,9 +32,19 @@
     <%end%>
 </div>
 
-</div>
-
+      </div>
+    </div>
+  </div>
 </div><!--/#home-->
+<div class="container">
+  <div class="row">
+    <div class="col bg-primary">一列目</div>
+    <div class="col bg-success">２列目</div>
+    <div class="col bg-danger">３列目</div>
+  </div>
+
+</div>
+<h1 class="text-success">Hello world!!</h1>
 
 <%# <div class="wrapper grid"> %>
 <div class="article_list">
