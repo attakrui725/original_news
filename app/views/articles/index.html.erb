@@ -9,8 +9,21 @@
 
       <div class="container-fluid">
         <div class="row">
-          <nav>
-            <ul class="nav ">
+
+<div class="home-content-sub-title col-2 order-lg-1 order-md-3">
+ <% @genres.drop(1).each do |genre| %>
+      <%= link_to "#{genre.name}", genre_path(genre.id),class: "nav-link" %>
+    <%end%>
+    </div>
+
+  <div id="home" class="big-bg col-7 order-lg-2 order-md-2">
+<div class="home-content wrapper">
+<h2 class="page-title">make worthwhile time</h2>
+    </div>
+</div>
+
+          <nav class=" col-2 order-lg-3 order-md-1">
+            <ul class="nav main-nav f">
         <% if user_signed_in? %>
         <li class="nav-item"><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "a" %></li>
         <li class="nav-item"><%= link_to 'new post', new_article_path, class: "a" %></li>
@@ -22,29 +35,10 @@
         </nav>
 
 
-  <div id="home" class="big-bg">
 
-<div class="home-content wrapper">
-<h2 class="page-title">make worthwhile time</h2>
-<div class="home-content-sub-title">
- <% @genres.drop(1).each do |genre| %>
-      <%= link_to "#{genre.name}", genre_path(genre.id),class: "nav-link" %>
-    <%end%>
-</div>
 
-      </div>
-    </div>
   </div>
 </div><!--/#home-->
-<div class="container">
-  <div class="row">
-    <div class="col bg-primary">一列目</div>
-    <div class="col bg-success">２列目</div>
-    <div class="col bg-danger">３列目</div>
-  </div>
-
-</div>
-<h1 class="text-success">Hello world!!</h1>
 
 <%# <div class="wrapper grid"> %>
 <div class="article_list">
