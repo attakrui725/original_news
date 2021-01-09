@@ -6,16 +6,11 @@
       <div class="card_content">
         <h1 class="title"><%= article.name %></h1>
         <p class="description"><%= article.description %></p>
-        <% if current_user.already_favorited?(article) %>
-        <%= link_to article_favorites_path(article), method: :delete do %>
-        <i class="fas fa-heart"></i>
-        <% end %>
-      <% else %>
-        <%= link_to article_favorites_path(article), method: :post do %>
-          <i class="fas fa-heart"></i>
-          <% end %>
-        <% end %>
-        <%= article.favorites.count %>
+
+          <div id="likes_buttons_<%= article.id %>">
+            <%= render partial: 'favorites/favorite', locals: { article: article} %>
+          </div>
+
       </div>
     </div>
     <% end %>
