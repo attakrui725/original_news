@@ -4,14 +4,14 @@
   <div class="news">
   <%= @title %>
   <%= link_to '続きを読む', @article.url, class: "read_more_center" %>
-    <%# <div class="read_more_center">続きを読む</div> %>
+
       <div class="edit">
       <% if user_signed_in? && @article.user_id == current_user.id %>
       <%= link_to '編集', '#', method: :get, class: "item-red-btn" %>
-
-      <%= link_to '削除', article_path(@article.id), method: :delete, class:'item-destroy' %>
+<%= link_to '削除', article_path(@article.id), method: :delete, class:'item-destroy' %>
       <% end %>
       </div>
+        <%= render partial: "favorites/favorite", locals: { article:@article } %>
   </div>
   <div class="news_comment"><%= render "messages/new" %></div>
 </div>

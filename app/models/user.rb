@@ -9,4 +9,8 @@ has_many :articles
 has_many :messages
 has_many :favorites, dependent: :destroy
 
+
+  def liked_by?(article_id)
+      favorites.where(article_id: article_id).exists?
+  end
 end
