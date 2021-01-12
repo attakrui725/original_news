@@ -1,1 +1,1 @@
-$('.likes_buttons').html("<%= j(render partial: 'favorites/favorite', locals: {article: @article}) %>");
+document.getElementById('article_<%= @article.id %>').innerHTML = '<%= j(render partial: 'favorites/favorite', locals: {article: @article}) %>'

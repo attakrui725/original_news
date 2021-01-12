@@ -11,6 +11,7 @@
 <%= link_to '削除', article_path(@article.id), method: :delete, class:'item-destroy' %>
       <% end %>
       </div>
+      <div id="article_<%= @article.id %>">
         <%= render partial: "favorites/favorite", locals: { article:@article } %>
   </div>
   <div class="news_comment"><%= render "messages/new" %></div>
