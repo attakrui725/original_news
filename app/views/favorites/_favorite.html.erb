@@ -1,0 +1,13 @@
+
+
+<% if user_signed_in? %>
+  <% if current_user.liked_by?(article.id) %>
+    <%= link_to  destroy_favorite_path(article), method: :delete, remote: true do %>
+      <p class="like-button"><i class="fas fa-heart fa-2x" style="color: #e82a2a;"></i><span style="color: #e82a2a"><%= article.favorites.count %></span></p>
+    <% end %>
+  <% else %>
+    <%= link_to create_favorite_path(article), method: :post, remote: true do %>
+      <p class="like-button"><i class="far fa-heart fa-2x" style="color: #e82a2a;"></i><span style="color: #e82a2a"><%= article.favorites.count %></span></p>
+    <% end %>
+  <% end %>
+<% end %>

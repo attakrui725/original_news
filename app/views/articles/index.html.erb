@@ -4,40 +4,69 @@
   <meta name ="description" content="無駄をなくし、価値ある時間を増やすための学習サイト">
   </head>
 
-  <body>
-  <div id="home" class="big-bg">
+<body>
 
-  <header class="page-header wrapper">
-      <nav>
-      <ul class="main-nav">
+
+      <div class="container-fluid">
+        <div class="row">
+
+<div class="home-content-sub-title col-2 order-lg-1 order-md-3">
+ <% @genres.drop(1).each do |genre| %>
+      <%= link_to "#{genre.name}", genre_path(genre.id),class: "nav-link" %>
+    <%end%>
+    </div>
+
+  <div id="home" class="big-bg col-7 order-lg-2 order-md-2">
+<div class="home-content wrapper">
+<h2 class="page-title">make worthwhile time</h2>
+    </div>
+</div>
+
+          <nav class=" col-2 order-lg-3 order-md-1">
+            <ul class="nav main-nav f">
         <% if user_signed_in? %>
-        <li><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "a" %></li>
-        <li><%= link_to 'new post', new_article_path, class: "a" %></li>
+        <li class="nav-item"><%= link_to 'logout', destroy_user_session_path, method: :delete, class: "a" %></li>
+        <li class="nav-item"><%= link_to 'new post', new_article_path, class: "a" %></li>
         <% else %>
         <li><%= link_to 'login', new_user_session_path, class: "a" %></li>
         <li><%= link_to 'sign-up', new_user_registration_path, class: "a" %></li>
         <% end %>
-    </ul>
-</nav>
-</header>
-<div class="home-content wrapper">
-<h2 class="page-title">make worthwhile time</h2>
-<div class="home-content-sub-title">
- <% @genres.drop(1).each do |genre| %>
-      <%= link_to "#{genre.name}", genre_path(genre.id),class: "nav-link" %>
-    <%end%>
-</div>
+            </ul>
+        </nav>
 
-</div>
 
+
+
+  </div>
 </div><!--/#home-->
 
 <%# <div class="wrapper grid"> %>
 <div class="article_list">
-<%= render @articles %>
-</div>
+
+  <% @articles.each do |article| %>
+
+  <div class="card_wrapper">
+  <%= link_to article_path(article.id) do %>
+    <div class="card_container">
+      <div><%= image_tag article.img, class: "card_image" %></div>
+      <div class="card_content">
+        <h1 class="title"><%= article.name %></h1>
+        <p class="description"><%= article.description %></p>
+          </div>
+        </div>
+          <% end %>
+          <div id="article_<%= article.id %>">
+          <%= render partial: "favorites/favorite", locals: { article: article } %>
+      </div>
+      </div>
+          </tr>
+          <% end %>
+
+
+
+
 
 <%# </div><!--/.grid--> %>
 
-  </body>
+</body>
 </html>

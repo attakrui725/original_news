@@ -64,4 +64,5 @@ Rails.application.configure do
   BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
 end
 
+config.web_console.whitelisted_ips = [ "172.16.0.0/12" ]
 end
