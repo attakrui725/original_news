@@ -81,3 +81,7 @@ a:hover {
   display: flex;
   justify-content: center;
 }
+
+.card-blog.card-horizontal.card-md .card-date{
+bottom: 0;
+}

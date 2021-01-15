@@ -4,12 +4,66 @@
     <title>OriginalNews</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <link rel="icon" type="image/png" href="dist/assets/images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
     <script src="https://kit.fontawesome.com/4e0390868c.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- START: Styles -->
+    <!-- Swiper -->
+    <link rel="stylesheet" href="dist/assets/vendor/swiper/dist/css/swiper.min.css" />
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.css" />
+    <!-- Themebau -->
+    <link rel="stylesheet" href="dist/assets/css/themebau.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="dist/assets/css/custom.css">
+    <!-- END: Styles -->
+    <!-- jQuery -->
+    <script src="dist/assets/vendor/jquery/dist/jquery.min.js"></script>
+</head>
   <body>
+  <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
+<footer>
+ <!-- START: Scripts -->
+    <!-- Object Fit Polyfill -->
+    <script src="dist/assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+    <!-- Popper -->
+    <script src="dist/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="dist/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Validator -->
+    <script src="dist/assets/vendor/bootstrap-validator/dist/validator.min.js"></script>
+    <!-- ImagesLoaded -->
+    <script src="dist/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <!-- Swiper -->
+    <script src="dist/assets/vendor/swiper/dist/js/swiper.min.js"></script>
+    <!-- Animejs -->
+    <script src="dist/assets/vendor/animejs/lib/anime.min.js"></script>
+    <!-- Rellax -->
+    <script src="dist/assets/vendor/rellax/rellax.min.js"></script>
+    <!-- Countdown -->
+    <script src="dist/assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+    <!-- Moment.js -->
+    <script src="dist/assets/vendor/moment/min/moment.min.js"></script>
+    <script src="dist/assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+    <!-- Isotope -->
+    <script src="dist/assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+    <script src="dist/assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+    <!-- Jarallax -->
+    <script src="dist/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="dist/assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
+    <!-- Fancybox -->
+    <script src="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+    <!-- Themebau -->
+    <script src="dist/assets/js/themebau.min.js"></script>
+    <!-- END: Scripts --></footer>
 </html>
