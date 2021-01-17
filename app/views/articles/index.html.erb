@@ -34,8 +34,10 @@
                         stroke-linejoin="round" />
                     </svg>
                   </a>
+
+                  <%# ナビゲーションバー homeの項目 %>
                   <div class="navbar-collapse-menu collapse" id="navbarCollapseHome">
-                    <ul class="nav navbar-nav">
+                      <ul class="nav navbar-nav">
                       <li class="nav-item">
                         <a href="home.html" class="nav-link">
                           <span class="nav-link-name">main home</span>
@@ -46,53 +48,11 @@
                           <span class="nav-link-name">simple portofolio</span>
                         </a>
                       </li>
-                      <li class="nav-item">
-                        <a href="creative-agency.html" class="nav-link">
-                          <span class="nav-link-name">creative agency</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="freelancer-portfolio.html" class="nav-link">
-                          <span class="nav-link-name">freelancer portfolio</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="interactive-links-dark.html" class="nav-link">
-                          <span class="nav-link-name">interactive dark</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="interactive-links-light.html" class="nav-link">
-                          <span class="nav-link-name">interactive light</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="left-menu.html" class="nav-link">
-                          <span class="nav-link-name">left menu</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="digital-agency.html" class="nav-link">
-                          <span class="nav-link-name">digital agency</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="carousel-dark.html" class="nav-link">
-                          <span class="nav-link-name">carousel dark</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="carousel-light.html" class="nav-link">
-                          <span class="nav-link-name">carousel light</span>
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="fullscreen-showcase.html" class="nav-link">
-                          <span class="nav-link-name">fullscreen showcase</span>
-                        </a>
-                      </li>
+
                     </ul>
                   </div>
+                  <%# ナビゲーションバー homeの項目 %>
+
                 </li>
                 <li class="nav-item navbar-collapse">
                   <a href="#navbarCollapseProjects" class="nav-link collapsed" role="button" data-toggle="collapse"
@@ -494,7 +454,11 @@
         <div class="pt-60 pb-60 mt-10 mb-2 text-center">
           <h1 class="mt-10 show-on-scroll" data-show-duration="600" data-show-distance="10">Our blog</h1>
         </div>
+
+        <%# ジャンルの選択 %>
         ## <div class="isotope">
+
+
           <ul class="nav justify-content-center isotope-options mb-60 pb-30 show-on-scroll" data-show-duration="500"
             data-show-delay="50">
             <li class="nav-item active show-on-scroll" data-show-duration="400" data-show-distance="10"
@@ -503,11 +467,15 @@
                 <div class="nav-link-name">all posts</div>
               </a>
             </li>
+
+            <% @genres.drop(1).each do |genre| %>
             <li class="nav-item show-on-scroll" data-show-duration="400" data-show-distance="10" data-show-delay="150">
-              <a href="#" data-filter="lifestyle" class="nav-link">
-                <div class="nav-link-name">lifestyle</div>
+              <a href="#" data-filter="#{<%= genre.name %>}" class="nav-link">
+                <div class="nav-link-name"><%=  genre.name %></div>
               </a>
             </li>
+            <%end%>
+
             <li class="nav-item show-on-scroll" data-show-duration="400" data-show-distance="10" data-show-delay="200">
               <a href="#" data-filter="design" class="nav-link">
                 <div class="nav-link-name">design</div>
@@ -524,11 +492,14 @@
               </a>
             </li>
           </ul>
+          <%# ジャンルの選択 %>
+
+          <%# 記事の投稿 %>
           <div class="row justify-content-center gh-1 show-on-scroll" data-show-duration="700" data-show-delay="250">
             <div class="col-12 col-lg-10 isotope-grid">
           <% @articles.each do |article| %>
                   <%= link_to article_path(article.id) do %>
-              <div class="card card-blog card-horizontal card-md isotope-item my-5" data-filters=lifestyle>
+              <div class="card card-blog card-horizontal card-md isotope-item my-5" data-filters="#{<%= article.genre.name %>}">
                 <div class="card-img">
                   <%= image_tag article.img, class: "card-img" %>
                 </div>
@@ -588,25 +559,12 @@
                         stroke-linejoin='round' /></svg></a>
                 </div>
               </div>
-              <div class="card card-blog card-horizontal card-md isotope-item" data-filters=company>
-                <a href="single-post.html" class="card-img">
-                  <img src="dist/assets/images/blog/blog-4.jpg" alt="">
-                </a>
-                <div class="card-body">
-                  <a href="single-post.html" class="card-title h5">Are you getting the Most out of your Travel?</a>
-                  <div class="card-date">03 may, 2020</div>
-                  <p class="card-text">For divide moveth. Years green above spirit after Every one and don&#39;t earth.
-                  </p>
-                  <a href="single-post.html" class="btn btn-clean">read more<svg class='icon-arrow icon-arrow-right'
-                      width='25' height='10' viewBox='0 0 25 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                      <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round'
-                        stroke-linejoin='round' />
-                      <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round'
-                        stroke-linejoin='round' /></svg></a>
-                </div>
-              </div>
+
             </div>
           </div>
+        <%# 記事の投稿 %>
+
+
           <div class="text-center mt-100">
             <a href="blog-col-3.html" class="btn btn-light btn-circle btn-lg">more</a>
           </div>
