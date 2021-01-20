@@ -1,5 +1,6 @@
-
-<div class="content">
+<div class="container">
+<div class="row">
+<div class="content col">
 <div class="content_area">
   <div > <%= image_tag @image, class: "news_image" %></div>
   <div class="news">
@@ -21,5 +22,8 @@
       <div class="">ジャンル <%= @article.genre.name %></div>
         </div>
   <div class="news_comment"><%= render "messages/new" %></div>
+</div>
+</div>
+
 </div>
 </div>
