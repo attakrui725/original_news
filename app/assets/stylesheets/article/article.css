@@ -66,3 +66,22 @@ a:focus,
 a:hover {
   text-decoration: none;
 }
+
+.like-button {
+  font-size: 10px;
+  color: #FA6212;
+}
+
+.card_user {
+  margin-left: 1rem;
+  color: #FA6212;
+}
+
+.data {
+  display: flex;
+
+}
+
+.card-blog.card-horizontal.card-md .card-date{
+bottom: 0;
+}

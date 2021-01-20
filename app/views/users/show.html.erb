@@ -1,0 +1,83 @@
+
+
+    <body>
+        <div class="content-wrap">
+            <div class="container">
+            <div class="row">
+      <div class="content-wrap">
+      <div class="container">
+        <div class="pt-60 pb-60 mt-10 mb-2 text-center">
+          <h1 class="mt-10 show-on-scroll" data-show-duration="600" data-show-distance="10">My page</h1>
+            <%= "ユーザーネーム #{@user.name}" %>
+            </div>
+                <div class="isotope">
+                    <ul class="nav justify-content-center isotope-options mb-60 pb-30">
+                        <li class="nav-item active">
+                            <a href="#" data-filter="all" class="nav-link">
+                                <div class="nav-link-name">all posts</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-filter="lifestyle" class="nav-link">
+                                <div class="nav-link-name">lifestyle</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-filter="design" class="nav-link">
+                                <div class="nav-link-name">design</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-filter="business" class="nav-link">
+                                <div class="nav-link-name">business</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-filter="company" class="nav-link">
+                                <div class="nav-link-name">company</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="row gh-1 gv-4 isotope-grid">
+                  <% @user.articles.each do |article| %>
+                  <%= link_to article_path(article.id) do %>
+
+                        <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filters="lifestyle">
+                            <div class="card card-blog card-vertical">
+                                <div class="card-img">
+<%= image_tag article.img, class: "card-img" %>                                </div>
+                                <div class="card-body">
+                                    <div class="card-title h5"><%= article.name %></div>
+                                    <div class="card-date"><%= article.created_at.strftime('%Y/%m/%d')%></div>
+                                    <p class="card-text"><%= article.description %></p>
+                                    <a href="single-post.html" class="btn btn-clean">read more<svg class='icon-arrow icon-arrow-right' width='25' height='10' viewBox='0 0 25 10' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                                            <path d='M20 1L24 5L20 9' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' />
+                                            <path d='M7 5L24 5' stroke='currentColor' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round' /></svg></a>
+                                            <div class="data d-flex justify-content-end">
+          <div id="article_<%= article.id %>">
+          <%= render partial: "favorites/favorite", locals: { article: article } %>
+          </div>
+          <div><%= link_to "by #{article.user.name}", user_path(article.user.id), class: :card_user %>
+          </div>
+          </div>
+                                </div>
+                          <% end %>
+
+                            </div>
+                        </div>
+                        <% end %>
+
+
+
+                </div>
+                <div class="pt-130 pb-160 mt-30">
+                    <div class="row justify-content-center text-center">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

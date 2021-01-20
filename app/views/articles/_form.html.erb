@@ -3,6 +3,7 @@
       <%= form.text_area :url, placeholder: "記事のURL", rows: "10", class: "form-control" %>
     </div>
     <div class="form-group">
+    <p>記事のジャンル</p>
       <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, { class: "form-control"}) %>
       </div>
 
