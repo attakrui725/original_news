@@ -17,23 +17,25 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- START: Styles -->
-    <%# <!-- Swiper -->
-    <link rel="stylesheet" href="dist/assets/vendor/swiper/dist/css/swiper.min.css" />
+    <!-- Swiper -->
+    <%# <link rel="stylesheet" href="dist/assets/vendor/swiper/dist/css/swiper.min.css" />
     <!-- Fancybox -->
-    <link rel="stylesheet" href="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.css" /> %>
     <!-- Themebau -->
-    <link rel="stylesheet" href="dist/assets/css/themebau.min.css">
+    <%# <link rel="stylesheet" href="dist/assets/css/themebau.min.css"> %>
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="dist/assets/css/custom.css">
+    <%# <link rel="stylesheet" href="dist/assets/css/custom.css"> %>
     <!-- END: Styles -->
     <!-- jQuery -->
-    <script src="dist/assets/vendor/jquery/dist/jquery.min.js"></script> %>
+  <%# <script src="dist/assets/vendor/jquery/dist/jquery.min.js"></script> %>
+
 </head>
   <body>
   <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 <footer>
+
 <!-- START: Scripts -->
     <%# <!-- Object Fit Polyfill -->
     <script src="dist/assets/vendor/object-fit-images/dist/ofi.min.js"></script>
@@ -48,9 +50,9 @@
     <!-- Swiper -->
     <script src="dist/assets/vendor/swiper/dist/js/swiper.min.js"></script>
     <!-- Animejs -->
-    <script src="dist/assets/vendor/animejs/lib/anime.min.js"></script>
+    <%# <script src="dist/assets/vendor/animejs/lib/anime.min.js"></script> %>
     <!-- Rellax -->
-    <script src="dist/assets/vendor/rellax/rellax.min.js"></script>
+    <%# <script src="dist/assets/vendor/rellax/rellax.min.js"></script>
     <!-- Countdown -->
     <script src="dist/assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
     <!-- Moment.js -->
@@ -63,11 +65,15 @@
     <script src="dist/assets/vendor/jarallax/dist/jarallax.min.js"></script>
     <script src="dist/assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
     <!-- Fancybox -->
-    <script src="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+    <script src="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script> %>
     <!-- Themebau -->
-    <script src="dist/assets/js/themebau.min.js"></script>
-    <!-- END: Scripts --> %>
-    <%= javascript_include_tag "application" %>
+    <%# <script src="dist/assets/js/themebau.min.js"></script> %>
+    <!-- END: Scripts -->
+<%# <script src="dist/assets/vendor/swiper/dist/js/swiper.min.js"></script> %>
+
+
+<%= javascript_include_tag "application" %>
+
 
     </footer>
 </html>
