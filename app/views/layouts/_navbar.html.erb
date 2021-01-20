@@ -288,6 +288,13 @@
                     <span><%= link_to 'new post', new_article_path, class: "nav-link-name" %></span>
                   </div>
                 </li>
+
+                <li class="nav-item navbar-collapse">
+                  <div class="nav-link collapsed" role="button" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="navbarCollapseProjects">
+                    <span><%= link_to 'my page', user_path(current_user.id), class: "nav-link-name" %></span>
+                  </div>
+                </li>
                 <% else %>
                 <li class="nav-item navbar-collapse">
                   <div class="nav-link collapsed" role="button" data-toggle="collapse"
