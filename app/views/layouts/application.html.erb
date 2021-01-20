@@ -17,7 +17,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- START: Styles -->
-    <!-- Swiper -->
+    <%# <!-- Swiper -->
     <link rel="stylesheet" href="dist/assets/vendor/swiper/dist/css/swiper.min.css" />
     <!-- Fancybox -->
     <link rel="stylesheet" href="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.css" />
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="dist/assets/css/custom.css">
     <!-- END: Styles -->
     <!-- jQuery -->
-    <script src="dist/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="dist/assets/vendor/jquery/dist/jquery.min.js"></script> %>
 </head>
   <body>
   <%= render 'layouts/navbar' %>
@@ -35,7 +35,7 @@
   </body>
 <footer>
 <!-- START: Scripts -->
-    <!-- Object Fit Polyfill -->
+    <%# <!-- Object Fit Polyfill -->
     <script src="dist/assets/vendor/object-fit-images/dist/ofi.min.js"></script>
     <!-- Popper -->
     <script src="dist/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
@@ -66,6 +66,8 @@
     <script src="dist/assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
     <!-- Themebau -->
     <script src="dist/assets/js/themebau.min.js"></script>
-    <!-- END: Scripts -->
+    <!-- END: Scripts --> %>
+    <%= javascript_include_tag "application" %>
+
     </footer>
 </html>
