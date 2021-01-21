@@ -52,6 +52,7 @@
                           <div class="data d-flex justify-content-end">
           <div id="article_<%= article.id %>">
           <%= render partial: "favorites/favorite", locals: { article: article } %>
+
           </div>
           <div><%= link_to "by #{article.user.name}", user_path(article.user.id), class: :card_user %>
           </div>
