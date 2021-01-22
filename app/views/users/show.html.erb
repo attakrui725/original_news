@@ -35,12 +35,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" data-filter="business" class="nav-link">
+                            <a href="#" data-filter="フォロー" class="nav-link">
                                 <div class="nav-link-name"> <%= @user.followings.count %> フォロー</div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" data-filter="company" class="nav-link">
+                            <a href="#" data-filter="フォロワー" class="nav-link">
                                 <div class="nav-link-name"><%= @user.followers.count %>フォロワー</div>
                             </a>
                         </li>
@@ -72,14 +72,10 @@
                             </div>
                         </div>
                         <% end %>
-                </div>
-                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<br>
-<br>
-<br>
-<div class="container testimonials">
+
+   <div class="container testimonials isotope-item" data-filters="フォロー">
     <div class="row">
-    <% @users.each do |user| %>
+    <% @user.followings.all.each do |user| %>
         <div class="col-md-4 testimonial">
             <div class="row">
                 <div class="avatar col-md-5">
@@ -92,43 +88,49 @@
                     <h4 class="media-heading"><%= link_to "#{user.name}", user_path(user.id) %>
 </h4>
                     <p class="testimony-body">bootstrap rules!</p>
-                   フォロー<%= user.followings.count %>
-                   フォロワー<%= user.followers.count %>
+                  フォロー<%= user.followings.count %>
+                  フォロワー<%= user.followers.count %>
                 </div>
                 <%= render partial: "relationships/follow_button", locals: { user: user }  %>
             </div>
         </div>
         <% end %>
-        <div class="col-md-4 testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <a href="#">
-                        <img class="img-circle" src="https://bootdey.com/img/Content/user_2.jpg" alt="Taylor Otwell">
-                    </a>
-                </div>
-
-                <div class="testimonial-main col-md-7">
-                    <h4 class="media-heading"><a href="#">Darla Marty</a></h4>
-                    <p class="testimony-body">Bootdey rules!</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <a href="#">
-                        <img class="img-circle" src="https://bootdey.com/img/Content/user_1.jpg" alt="Taylor Otwell">
-                    </a>
-                </div>
-
-                <div class="testimonial-main col-md-7">
-                    <h4 class="media-heading"><a href="#">Maryou Mcjouin</a></h4>
-                    <p class="testimony-body">Ok man!</p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+
+ <div class="container testimonials isotope-item" data-filters="フォロワー">
+    <div class="row">
+    <% @user.followers.all.each do |user| %>
+        <div class="col-md-4 testimonial">
+            <div class="row">
+                <div class="avatar col-md-5">
+                    <a href="#">
+                        <img class="img-circle" src="https://bootdey.com/img/Content/user_3.jpg" alt="Taylor Otwell">
+                    </a>
+                </div>
+
+                <div class="testimonial-main col-md-7">
+                    <h4 class="media-heading"><%= link_to "#{user.name}", user_path(user.id) %>
+</h4>
+                    <p class="testimony-body">bootstrap rules!</p>
+                  フォロー<%= user.followings.count %>
+                  フォロワー<%= user.followers.count %>
+                </div>
+                <%= render partial: "relationships/follow_button", locals: { user: user }  %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>
+                </div> <%# isotope-grid %>
+
+
+
+                <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<br>
+<br>
+<br>
+
                 <div class="pt-130 pb-160 mt-30">
 
                     <div class="row justify-content-center text-center">
