@@ -87,9 +87,9 @@
                 <div class="testimonial-main col-md-7">
                     <h4 class="media-heading"><%= link_to "#{user.name}", user_path(user.id) %>
 </h4>
-                    <p class="testimony-body">bootstrap rules!</p>
-                  フォロー<%= user.followings.count %>
+                    フォロー<%= user.followings.count %>
                   フォロワー<%= user.followers.count %>
+
                 </div>
                 <%= render partial: "relationships/follow_button", locals: { user: user }  %>
             </div>
@@ -112,7 +112,6 @@
                 <div class="testimonial-main col-md-7">
                     <h4 class="media-heading"><%= link_to "#{user.name}", user_path(user.id) %>
 </h4>
-                    <p class="testimony-body">bootstrap rules!</p>
                   フォロー<%= user.followings.count %>
                   フォロワー<%= user.followers.count %>
                 </div>
