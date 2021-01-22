@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   post 'favorite/:id' => 'favorites#create', as: 'create_favorite'
   delete 'favorite/:id' => 'favorites#destroy', as:'destroy_favorite'
   resources :genres, only: :show
-  resources :users, only: :show
+  resources :users do
+    get :followings, on: :member
+    get :followers, on: :member
+  end
 
 end
