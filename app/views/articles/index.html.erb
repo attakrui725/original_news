@@ -26,21 +26,6 @@
             </li>
             <%end%>
 
-            <li class="nav-item show-on-scroll" data-show-duration="400" data-show-distance="10" data-show-delay="200">
-              <a href="#" data-filter="design" class="nav-link">
-                <div class="nav-link-name">design</div>
-              </a>
-            </li>
-            <li class="nav-item show-on-scroll" data-show-duration="400" data-show-distance="10" data-show-delay="250">
-              <a href="#" data-filter="business" class="nav-link">
-                <div class="nav-link-name">business</div>
-              </a>
-            </li>
-            <li class="nav-item show-on-scroll" data-show-duration="400" data-show-distance="10" data-show-delay="300">
-              <a href="#" data-filter="company" class="nav-link">
-                <div class="nav-link-name">company</div>
-              </a>
-            </li>
           </ul>
           <%# ジャンルの選択 %>
 
@@ -67,6 +52,7 @@
                           <div class="data d-flex justify-content-end">
           <div id="article_<%= article.id %>">
           <%= render partial: "favorites/favorite", locals: { article: article } %>
+
           </div>
           <div><%= link_to "by #{article.user.name}", user_path(article.user.id), class: :card_user %>
           </div>
@@ -94,10 +80,7 @@
 
             </div>
             <div class="col-lg-7 mt-4">
-              <form action="#" class="form-group-overlay">
-                <input class="form-control" type="email" placeholder="Your Email *">
-                <button class="btn btn-clean btn-with-ball">send</button>
-              </form>
+
             </div>
           </div>
         </div>

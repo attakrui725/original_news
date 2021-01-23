@@ -81,11 +81,26 @@ https://gyazo.com/a4d86c049d773147c120394e0f4e5cdc
 
 
 
-## outputs
-|Column         |Type       |Options                       |
-|---------------|-----------|------------------------------|
-|text           |text       |null: false                   |
-|user           |references | null: false,foreign_key: true|
+## favorites
+|Column          |Type       |Options                       |
+|----------------|-----------|------------------------------|
+|article_id      |references |null: false,foreign_key:true  |
+|user_id         |references |null: false,foreign_key: true |
+
 
 ### Association
 - belongs_to :user
+- belongs_to :article
+
+
+
+## relationships
+|Column          |Type       |Options                       |
+|----------------|-----------|------------------------------|
+|user_id         |references |null: false,foreign_key:true  |
+|follow_id       |references |null: false,foreign_key:{to_table: users} |
+
+
+### Association
+- belongs_to :user
+- belongs_to :follow, class_name: 'User'

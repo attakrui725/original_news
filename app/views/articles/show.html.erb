@@ -10,17 +10,16 @@
       <div class="edit">
       <% if user_signed_in? && @article.user_id == current_user.id %>
       <%= link_to '編集', '#', method: :get, class: "item-red-btn" %>
-<%= link_to '削除', article_path(@article.id), method: :delete, class:'item-destroy' %>
+      <%= link_to '削除', article_path(@article.id), method: :delete, class:'item-destroy' %>
       <% end %>
       </div>
-      <div class="data">
+      <div class="data　d-flex justify-content-end">
           <div id="article_<%= @article.id %>">
           <%= render partial: "favorites/favorite", locals: { article: @article } %>
           </div>
           <div><%= link_to "by #{@article.user.name}", user_path(@article.user.id), class: :card_user %>
       </div>
-      <div class="">ジャンル <%= @article.genre.name %></div>
-        </div>
+    </div>
   <div class="news_comment"><%= render "messages/new" %></div>
 </div>
 </div>
