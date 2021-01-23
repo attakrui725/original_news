@@ -10,9 +10,6 @@
           <h1 class="mt-10 show-on-scroll" data-show-duration="600" data-show-distance="10">My page</h1>
             <%= "ユーザーネーム #{@user.name}" %>
             </div>
-            <%= link_to "フォロー: #{@user.followings.count}", followings_user_path(@user.id) %>
-
-            <%= link_to "フォロワー: #{@user.followers.count}", followers_user_path(@user.id) %>
 
 
             <%= render partial: "relationships/follow_button", locals: { user: @user }  %>
