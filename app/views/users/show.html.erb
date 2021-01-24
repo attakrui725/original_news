@@ -12,8 +12,7 @@
             </div>
 
 
-            <%= render partial: "relationships/follow_button", locals: { user: @user }  %>
-
+            <%= render "follow_button" %>
                 <div class="isotope">
                     <ul class="nav justify-content-center isotope-options mb-60 pb-30">
                         <li class="nav-item active">
@@ -72,6 +71,7 @@
 
    <div class="container testimonials isotope-item" data-filters="フォロー">
     <div class="row">
+    <%# フォロー一覧 %>
     <% @user.followings.all.each do |user| %>
         <div class="col-md-4 testimonial">
             <div class="row">
@@ -88,7 +88,8 @@
                   フォロワー<%= user.followers.count %>
 
                 </div>
-                <%= render partial: "relationships/follow_button", locals: { user: user }  %>
+                <%= render "follow_button2", locals: { user: user } %>
+
             </div>
         </div>
         <% end %>
@@ -97,6 +98,7 @@
 
  <div class="container testimonials isotope-item" data-filters="フォロワー">
     <div class="row">
+    <%# フォロワー一覧 %>
     <% @user.followers.all.each do |user| %>
         <div class="col-md-4 testimonial">
             <div class="row">
@@ -112,7 +114,7 @@
                   フォロー<%= user.followings.count %>
                   フォロワー<%= user.followers.count %>
                 </div>
-                <%= render partial: "relationships/follow_button", locals: { user: user }  %>
+                <%= render "follow_button2", locals: { user: user}%>
             </div>
         </div>
         <% end %>
