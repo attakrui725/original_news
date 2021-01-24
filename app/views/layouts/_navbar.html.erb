@@ -289,6 +289,8 @@
                   </div>
                 </li>
 
+
+
                 <li class="nav-item navbar-collapse">
                   <div class="nav-link collapsed" role="button" data-toggle="collapse"
                     aria-expanded="false" aria-controls="navbarCollapseProjects">
@@ -296,6 +298,13 @@
                   </div>
                 </li>
                 <% else %>
+                <li class="nav-item navbar-collapse">
+                  <div class="nav-link collapsed" role="button" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="navbarCollapseProjects">
+                    <span><%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %></span>
+                  </div>
+                </li>
+
                 <li class="nav-item navbar-collapse">
                   <div class="nav-link collapsed" role="button" data-toggle="collapse"
                     aria-expanded="false" aria-controls="navbarCollapseProjects">
