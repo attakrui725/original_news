@@ -13,7 +13,7 @@
       <%= link_to '削除', article_path(@article.id), method: :delete, class:'item-destroy' %>
       <% end %>
       </div>
-      <div class="data　d-flex justify-content-end">
+      <div class="data d-flex justify-content-end">
           <div id="article_<%= @article.id %>">
           <%= render partial: "favorites/favorite", locals: { article: @article } %>
           </div>

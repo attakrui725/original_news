@@ -88,7 +88,7 @@
                   フォロワー<%= user.followers.count %>
 
                 </div>
-                <%= render "follow_button2", locals: { user: user } %>
+                <%= render partial: "follow_button2", locals: { user: user }%>
 
             </div>
         </div>
@@ -114,7 +114,7 @@
                   フォロー<%= user.followings.count %>
                   フォロワー<%= user.followers.count %>
                 </div>
-                <%= render "follow_button2", locals: { user: user}%>
+                <%= render partial: "follow_button2", locals: { user: user }%>
             </div>
         </div>
         <% end %>
