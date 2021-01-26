@@ -32,7 +32,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="#" data-filter="フォロー" class="nav-link">
-                                <div class="nav-link-name"> <%= @user.followings.count %> フォロー</div>
+                                <div class="nav-link-name" id="followings"> <%= @user.followings.count %> フォロー</div>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -85,7 +85,7 @@
                     <h4 class="media-heading"><%= link_to "#{user.name}", user_path(user.id) %>
 </h4>
                     フォロー<%= user.followings.count %>
-                  フォロワー<%= user.followers.count %>
+            <div id="followers_<%= user.id %>">フォロワー<%= user.followers.count %></div>
 
                 </div>
                   <%= render  "follow_button2", user: user %>
@@ -113,7 +113,7 @@
                     <h4 class="media-heading"><%= link_to "#{user.name}", user_path(user.id) %>
 </h4>
                   フォロー<%= user.followings.count %>
-                  フォロワー<%= user.followers.count %>
+        <div id="followers_<%= user.id %>">フォロワー<%= user.followers.count %></div>
                 </div>
                 <%= render  "follow_button2", user: user %>
 
