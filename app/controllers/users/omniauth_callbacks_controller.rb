@@ -10,6 +10,10 @@ def google_oauth2
   authorization
 end
 
+def twitter
+  authorization
+end
+
 
 private
 
