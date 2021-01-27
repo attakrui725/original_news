@@ -69,3 +69,8 @@ gem 'bootstrap', '~> 4.5', '>= 4.5.3'
 gem 'kaminari'
 gem 'dotenv-rails'
 gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth', '~>1.9.1'
+gem 'omniauth-twitter'
