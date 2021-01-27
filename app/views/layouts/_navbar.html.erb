@@ -272,7 +272,7 @@
           <div class="col-12 col-md-7 col-lg-5 col-xl-4">
             <div class="navbar-body">
               <ul class="nav navbar-nav navbar-nav-collapse">
-                <li class="nav-item navbar-collapse">
+
                 <%# ナビゲーションバー newpostの項目 %>
 
                   <% if user_signed_in? %>
@@ -281,7 +281,7 @@
                     <span class="nav-link-name"><%= link_to "logout", destroy_user_session_path, method: :delete %></span>
                   </div>
 
-                </li>
+
                 <li class="nav-item navbar-collapse">
                   <div class="nav-link collapsed" role="button" data-toggle="collapse"
                     aria-expanded="false" aria-controls="navbarCollapseProjects">
@@ -299,31 +299,85 @@
                 </li>
                 <% else %>
                 <li class="nav-item navbar-collapse">
-                  <div class="nav-link collapsed" role="button" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="navbarCollapseProjects">
-                    <span><%= link_to 'guest_login（閲覧用）', users_guest_sign_in_path, method: :post, class: "guest_login" %></span>
-                  </div>
-                </li>
+                        <a href="#navbarCollapse2Column" class="nav-link collapsed" role="button" data-toggle="collapse"
+                          aria-expanded="false" aria-controls="navbarCollapse2Column">
+                          <span class="nav-link-name">login</span>
+                          <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </a>
+                        <div class="navbar-collapse-menu collapse" id="navbarCollapse2Column">
+                          <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to 'guest_login（閲覧用）', users_guest_sign_in_path, method: :post, class: "nav-link" %></span>
+                              </div>
+                            </li>
 
-                <li class="nav-item navbar-collapse">
-                  <div class="nav-link collapsed" role="button" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="navbarCollapseProjects">
-                    <span><%= link_to 'login', new_user_session_path, class: "nav-link-name" %></span>
-                  </div>
-                </li>
+                            <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                              </div>
+                            </li>
+                            <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                              </div>
+                            </li>
 
-                <li class="nav-item navbar-collapse">
-                  <div class="nav-link collapsed" role="button" data-toggle="collapse"
-                    aria-expanded="false" aria-controls="navbarCollapseProjects">
-                    <span><%= link_to 'sign-up', new_user_registration_path, class: "nav-link-name" %></span>
-                  </div>
-                </li>
+                        <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to 'twitterでログイン', user_twitter_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                              </div>
+                            </li>
+                          <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to 'email addressでログイン', new_user_session_path, class: "nav-link"%></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
 
-                <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post%>
-                <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+                      <li class="nav-item navbar-collapse">
+                        <a href="#navbarCollapsesign-up" class="nav-link collapsed" role="button" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="navbarCollapsesign-up">
+                    <span class="nav-link-name">sign-up</span>
+                    <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                        <div class="navbar-collapse-menu collapse" id="navbarCollapsesign-up">
+                          <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                              </div>
+                            </li>
 
-                <%= link_to 'twitterでログイン', user_twitter_omniauth_authorize_path, method: :post%>
+                            <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to "Googleで登録", user_google_oauth2_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                              </div>
+                            </li>
+                            <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"> <%= link_to "twitterで登録", user_twitter_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                              </div>
+                            </li>
 
+                        <li class="nav-item">
+                              <div class="nav-link">
+                                <span class="nav-link-name"><%= link_to 'email addressで登録', new_user_registration_path, class: "nav-link-name" %></span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
                 <% end %>
 
 
