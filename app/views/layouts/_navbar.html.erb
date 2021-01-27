@@ -301,7 +301,7 @@
                 <li class="nav-item navbar-collapse">
                         <a href="#navbarCollapse2Column" class="nav-link collapsed" role="button" data-toggle="collapse"
                           aria-expanded="false" aria-controls="navbarCollapse2Column">
-                          <span class="nav-link-name">login</span>
+                          <span class="nav-link-name">Sign in</span>
                           <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -318,23 +318,24 @@
 
                             <li class="nav-item">
                               <div class="nav-link">
-                                <span class="nav-link-name"><%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+
+                                <span class="nav-link-name"><%= link_to 'Sign in with Facebook', user_facebook_omniauth_authorize_path, method: :post, class: "nav-link"%> </span>
                               </div>
                             </li>
                             <li class="nav-item">
                               <div class="nav-link">
-                                <span class="nav-link-name"><%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                                <span class="nav-link-name"><%= link_to 'Sign in with Google', user_google_oauth2_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
                               </div>
                             </li>
 
                         <li class="nav-item">
                               <div class="nav-link">
-                                <span class="nav-link-name"><%= link_to 'twitterでログイン', user_twitter_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
+                                <span class="nav-link-name"><%= link_to 'Sign in with Twitter', user_twitter_omniauth_authorize_path, method: :post, class: "nav-link"%></span>
                               </div>
                             </li>
                           <li class="nav-item">
                               <div class="nav-link">
-                                <span class="nav-link-name"><%= link_to 'email addressでログイン', new_user_session_path, class: "nav-link"%></span>
+                                <span class="nav-link-name"><%= link_to 'Sign in with Email address', new_user_session_path, class: "nav-link"%></span>
                               </div>
                             </li>
                           </ul>
