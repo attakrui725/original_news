@@ -381,18 +381,31 @@
                       </li>
                 <% end %>
 
-
-                <li class="nav-item navbar-collapse active">
-
-                    <span class="nav-link-name"><%= link_to 'top page', root_path, class: "nav-link-name" %></span>
-
-
+            <li class="nav-item navbar-collapse">
+                  <div class="nav-link collapsed" role="button" data-toggle="collapse"
+                    aria-expanded="false" aria-controls="navbarCollapseProjects">
+                    <span><%= link_to 'top page', root_path, class: "nav-link-name" %></span>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-md-1 d-none d-md-block"></div>
-
+            </div>
+            <div class="pt-130 pb-160 mt-30">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-7 mt-4">
+  <%= search_form_for @q, url: search_articles_path do |f| %>
+    <div class="form-floating">
+  <%= f.label :name_or_description_cont_any, '記事検索', for: "floatingInput" %>
+  <%= f.search_field :name_or_description_cont_any,class:"form-control", id: "floatingInput" %>
+  </div>
+  <br>
+  <%= f.button '検索',class:"btn btn-clean btn-with-ball"%>
+<% end %>
+          </div>
         </div>
+ </div>
+
+
       </div>
     </div>
