@@ -10,6 +10,9 @@ devise_for :users, controllers: {
   root to: 'articles#index'
   resources :articles, only: [:new, :index, :create, :show,:update, :destroy] do
   resources :messages, only: [:create, :new]
+  collection do
+        get 'search'
+    end
   end
   resources :relationships, only: [:create, :destroy]
 
@@ -19,6 +22,7 @@ devise_for :users, controllers: {
   resources :users do
     get :followings, on: :member
     get :followers, on: :member
+
   end
 
 end

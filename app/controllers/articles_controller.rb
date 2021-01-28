@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+  before_action :set_q, only: [:index, :search]
+
+
   def index
     @articles = Article.page(params[:page]).per(5).order('created_at DESC')
     @genres = Genre.all
@@ -51,10 +54,18 @@ class ArticlesController < ApplicationController
     redirect_to root_path
   end
 
+  def search
+    @results = @q.result
+  end
+
 
   private
 
   def article_params
     params.require(:article).permit(:name, :description, :image, :url).merge(user_id: current_user.id)
+  end
+
+  def set_q
+    @q = Article.ransack(params[:q])
   end
 end
