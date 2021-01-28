@@ -1,4 +1,5 @@
 
+//= require anime.min
 //= require jquery.fancybox.min
 //= require isotope.pkgd.min
 //= require packery-mode.pkgd.min
