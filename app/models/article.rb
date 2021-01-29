@@ -3,6 +3,8 @@ class Article < ApplicationRecord
     validates :name
     validates :description
     validates :user_id
+    validates :url
+    validates :img
   end
   validates :genre_id, numericality: { other_than: 1 }
 
