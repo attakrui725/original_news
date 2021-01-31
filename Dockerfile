@@ -4,6 +4,8 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && apt-get update -qq \
   && apt-get install -y nodejs yarn \
   && mkdir /original_news
+
+
 WORKDIR /original_news
 COPY Gemfile /original_news/Gemfile
 COPY Gemfile.lock /original_news/Gemfile.lock
