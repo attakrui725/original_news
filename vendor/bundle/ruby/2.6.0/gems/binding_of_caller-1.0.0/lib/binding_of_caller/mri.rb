@@ -43,7 +43,7 @@ module BindingOfCaller
     # @return [Symbol]
     def frame_type
       return nil if !@iseq
-      
+
       # apparently the 9th element of the iseq array holds the frame type
       # ...not sure how reliable this is.
       @frame_type ||= @iseq.to_a[9]

@@ -32,3 +32,4 @@ yarn-debug.log*
 .Ds_Store
 vendor/bundle/ruby/2.6.0/bundler/gems/extractcontent-6dc303ab5ad9/
 .env
+vendor/bundle/ruby/2.6.0/gems
