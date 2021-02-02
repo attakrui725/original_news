@@ -52,5 +52,6 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       user.name = "test"
     end
+
   end
 end
