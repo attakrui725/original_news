@@ -112,4 +112,9 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
   config.i18n.fallbacks = [I18n.default_locale]
   config.assets.js_compressor = :uglifier
+
+
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "wss://originalnews.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://originalnews.herokuapp.com', 'http://originalnews.herokuapp.com']
 end
