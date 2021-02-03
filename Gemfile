@@ -83,3 +83,4 @@ gem 'simplecov',require: false, group: :test
 gem "aws-sdk-s3", require: false
 gem 'fog-aws'
 gem 'seed-fu'
+gem 'redis-rails', '~> 5.0', '>= 5.0.2'
