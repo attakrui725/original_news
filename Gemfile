@@ -35,6 +35,11 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 
 end
 
@@ -54,6 +59,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+
 end
 
 group :production do
