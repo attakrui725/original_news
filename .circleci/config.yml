@@ -36,16 +36,6 @@ jobs:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-      - run: # Ruby の依存関係をインストールします
-        name: バンドル インストール
-        command: bundle check --path vendor/bundle || bundle install --deployment
-
-      # Ruby の依存関係のバンドル キャッシュを保存します
-
-      - save_cache:
-          key: rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
 
       - save_cache:
           paths:
