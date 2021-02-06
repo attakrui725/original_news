@@ -12,16 +12,6 @@ jobs:
         environment:
 
           - BUNDLER_VERSION: 1.17.3
-          - run: # Ruby の依存関係をインストールします
-            name: バンドル インストール
-            command: bundle check --path vendor/bundle || bundle install --deployment
-
-      # Ruby の依存関係のバンドル キャッシュを保存します
-
-      - save_cache:
-          key: rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
-          paths:
-            - vendor/bundle
 
 
           - RAILS_ENV: 'test'
