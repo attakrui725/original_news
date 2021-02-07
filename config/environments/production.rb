@@ -115,6 +115,6 @@ Rails.application.configure do
 
 
   ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://originalnews.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://originalnews.herokuapp.com', 'http://originalnews.herokuapp.com']
+  config.action_cable.url = "wss://www.ournewschannel.com//cable"
+  config.action_cable.allowed_request_origins = ['https://www.ournewschannel.com/', 'http://www.ournewschannel.com/']
 end
