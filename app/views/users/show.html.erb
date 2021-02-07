@@ -15,21 +15,13 @@
             <%= render "follow_button" %>
                 <div class="isotope">
                     <ul class="nav justify-content-center isotope-options mb-60 pb-30">
-                        <li class="nav-item active">
-                            <a href="#" data-filter="all" class="nav-link">
-                                <div class="nav-link-name">all posts</div>
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <a href="#" data-filter="lifestyle" class="nav-link">
-                                <div class="nav-link-name">lifestyle</div>
+                                <div class="nav-link-name">my posts</div>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" data-filter="design" class="nav-link">
-                                <div class="nav-link-name">design</div>
-                            </a>
-                        </li>
+
                         <li class="nav-item">
                             <a href="#" data-filter="フォロー" class="nav-link">
                                 <div class="nav-link-name" id="followings"> <%= @user.followings.count %> フォロー</div>
@@ -42,9 +34,9 @@
                         </li>
                     </ul>
                     <div class="row gh-1 gv-4 isotope-grid">
+
                   <% @user.articles.each do |article| %>
                   <%= link_to article_path(article.id) do %>
-
                         <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filters="lifestyle">
                             <div class="card card-blog card-vertical">
                                 <div class="card-img">
