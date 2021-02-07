@@ -1,11 +1,9 @@
 class ArticlesController < ApplicationController
   before_action :set_q, only: [:index, :search]
 
-
   def index
     @articles = Article.page(params[:page]).per(5).order('created_at DESC')
     @genres = Genre.all
-
   end
 
   def new
@@ -57,7 +55,6 @@ class ArticlesController < ApplicationController
   def search
     @results = @q.result
   end
-
 
   private
 
