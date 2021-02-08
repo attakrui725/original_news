@@ -18,7 +18,15 @@ class ArticlesController < ApplicationController
     content = content_ele.get_attribute(:content)
     img_ele = page.at('meta[property="og:image"]')                # urlからサムネイル画像の取得
     img = img_ele.get_attribute(:content)                         # url情報のみへの絞り込み
-    @article = Article.new(name: title_ele, description: content, img: img, url: (params[:article][:url]), user_id: current_user.id, genre_id: (params[:article][:genre_id])) # Articleモデルの生成
+  @article = Article.new(
+                       name: title_ele,
+                       description: content,
+                       img: img,
+                       url: (params[:article][:url]),
+                       user_id: current_user.id,
+                       genre_id: (params[:article][:genre_id])
+)
+
     if @article.save # データの保存
       redirect_to root_path
     else

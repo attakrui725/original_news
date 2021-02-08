@@ -17,12 +17,20 @@
 
 いきなり、これらに関して勉強するのではなく、毎日これらの情報に対して少しでも触れていくことで、徐々に理解をしていくことができる。ただ、幅広いジャンルのサイトの記事を毎日閲覧したり、本を読むのは負担がかかる。
 なので、一つのアプリケーションでそれらの情報に毎日触れる機会をもつことで、情報リテラシーを向上させることができると考える。
+
+## 使用技術・言語
+- フロントエンド(javascript, jQuery, HTML/CSS, Sass,Bootstrap)
+- バックエンド(Ruby on Rails6.0)
+- テスト(RSpec, FactoryBot, Capybara)
+- Web サーバ(nginx, unicorn)
+- データベース(MySQL)
+- コンテナ(Docker, docker-compose)
+- AWS(VPC, EC2, Route53, ELB, ACM, CLI)
+- 開発環境(MacOS, VScode, Git, GitHub,sourcetree, CircleCI, bash)
+
 # 本番環境
-https://original-news-0725.herokuapp.com/
+https://www.ournewschannel.com/
 
-- メールアドレス a@gmail.com
-
-- password 111aaa
 
 # DEMO
 記事投稿機能
