@@ -15,10 +15,10 @@ https://www.ournewschannel.com/
 
 # 制作意図
 
-## 課題　
+## 課題
 自分たちの毎日をオトクにできるニュースサイト
-毎月の固定費の支払いや、資金の運用において、もったいない状況で、そのままにしてしまっている人が多い。例、通信費、水道光熱費、資産運用、税金対策など。
-ただ、これらに取り掛かるとしても、いきなり勉強を始めるのはなかなかハードルが高く、何から、勉強を始めるべきか迷ってしまうところがある。
+毎月の固定費の支払いや、資金の運用において、もったいない状況で、そのままにしてしまっている人が多いと思います。例えば、通信費、水道光熱費、資産運用、税金対策などがあります。
+ただ、これらに取り掛かるとしても、いきなり勉強を始めるのはなかなかハードルが高く、何から、勉強を始めるべきか迷ってしまうところがあると感じます。
 
 ## 対策
 
@@ -27,7 +27,7 @@ https://www.ournewschannel.com/
 
 ## 使用技術・言語
 - フロントエンド(javascript, jQuery, HTML/CSS, Sass,Bootstrap)
-- バックエンド(Ruby on Rails6.0)
+- バックエンド(Ruby on Rails)
 - テスト(RSpec, FactoryBot, Capybara)
 - Web サーバ(nginx, unicorn)
 - データベース(MySQL,MariaDB)
@@ -69,70 +69,4 @@ https://gyazo.com/a4d86c049d773147c120394e0f4e5cdc
 
 
 # DB設計
-
-
-## users
-|Column              |Type  |Options    |
-|--------------------|------|-----------|
-|nickname            |string|null: false|
-|email               |string|null: false|
-|encrypted_password  |string|null: false|
-
-### Association
-- has_many :articles
-- has_many :comment
-- has_many :output
-
-
-## articles
-|Column          |Type       |Options    |
-|----------------|-----------|-----------|
-|name            |string     |null: false|
-|description     |text       |null: false|
-|url             |text       |null: false|
-|img             |text       |null: false|
-|genre_id        |integer    |null: false|
-|user            |references |null: false,foreign_key: true|
-
-### Association
-- has_many :comments
-- belongs_to :user
-
-
-
-## comments
-|Column          |Type       |Options                       |
-|----------------|-----------|------------------------------|
-|text            |text       |null: false                   |
-| user           |references | null: false,foreign_key: true|
-| article        |references | null: false,foreign_key: true|
-
-### Association
-- belongs_to :user
-- belongs_to :article
-
-
-
-## favorites
-|Column          |Type       |Options                       |
-|----------------|-----------|------------------------------|
-|article_id      |references |null: false,foreign_key:true  |
-|user_id         |references |null: false,foreign_key: true |
-
-
-### Association
-- belongs_to :user
-- belongs_to :article
-
-
-
-## relationships
-|Column          |Type       |Options                       |
-|----------------|-----------|------------------------------|
-|user_id         |references |null: false,foreign_key:true  |
-|follow_id       |references |null: false,foreign_key:{to_table: users} |
-
-
-### Association
-- belongs_to :user
-- belongs_to :follow, class_name: 'User'
+![image](https://user-images.githubusercontent.com/73804663/107189550-e51e3700-6a2c-11eb-881f-ce40295080bd.png)
