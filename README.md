@@ -29,7 +29,8 @@
 - 開発環境(MacOS, VScode, Git, GitHub,sourcetree, CircleCI, bash)
 
 # インフラ図
-https://user-images.githubusercontent.com/73804663/107173311-dc1c6e00-6a0a-11eb-8c33-e4a0b9b23184.png
+![インフラ図](https://user-images.githubusercontent.com/73804663/107173311-dc1c6e00-6a0a-11eb-8c33-e4a0b9b23184.png)
+
 
 # 本番環境
 https://www.ournewschannel.com/
