@@ -56,17 +56,6 @@ https://www.ournewschannel.com/
 - 検索機能
 
 
-# DEMO
-記事投稿機能
-ウェブページのurlを投稿することで、簡単にオトクなニュースを共有できます。
-https://gyazo.com/a4d86c049d773147c120394e0f4e5cdc
-
-# 実装予定の内容
-・記事ジャンル別ページ切り替え機能
-・動画の提案機能
-・SNS認証機能
-
-
 
 # DB設計
 Rails-ERDでER図を自動作成しました。
