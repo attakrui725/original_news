@@ -4,8 +4,8 @@ let(:article) { build(:article) }
 
   describe "GET /index" do
     it 'indexアクションにリクエストすると正常にレスポンスが返ってくる' do
-      get root_path
-    binding.pry
+    get '/'
+      expect(response).to be_success
     end
     it 'indexアクションにリクエストするとレスポンスに投稿済みの記事のタイトルが存在する' do
     end
